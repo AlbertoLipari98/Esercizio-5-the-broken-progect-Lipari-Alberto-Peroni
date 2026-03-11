@@ -11,7 +11,7 @@ import { AccountService } from '../../core/services/account.service';
   selector: 'app-private-dashboard',
   standalone: true,
   imports: [CurrencyPipe],
-  providers: [AccountService],
+  providers: [],
   template: `
     <div class="dashboard">
       <div class="dashboard-header">
