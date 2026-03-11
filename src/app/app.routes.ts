@@ -21,6 +21,11 @@ export const routes: Routes = [
       import('./features/private/private-dashboard.component').then(
         (m) => m.PrivateDashboardComponent
       ),
+      providers: [
+        AccountService,{
+          provide: AccountRepository, useClass: HttpAccountRepository
+        },
+      ]
   },
 
   // ──────────────────────────────────────────────────────────────────

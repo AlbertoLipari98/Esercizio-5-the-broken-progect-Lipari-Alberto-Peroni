@@ -4,6 +4,8 @@ import { CurrencyPipe } from '@angular/common';
 
 import { AccountService } from '../../core/services/account.service';
 
+import { HttpAccountRepository } from '../../core/repositories/http-account.repository';
+
 /**
  * Dashboard per l'area PRIVATE.
  */
@@ -11,7 +13,7 @@ import { AccountService } from '../../core/services/account.service';
   selector: 'app-private-dashboard',
   standalone: true,
   imports: [CurrencyPipe],
-  providers: [],
+  providers: [HttpAccountRepository],
   template: `
     <div class="dashboard">
       <div class="dashboard-header">
