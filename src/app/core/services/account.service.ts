@@ -10,7 +10,7 @@ import { ACCOUNT_API_CONFIG } from '../config/account-api.config';
  *
  * providedIn: 'root' → singleton nel root injector.
  */
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class AccountService {
   private readonly repo = inject(AccountRepository);
   readonly config = inject(ACCOUNT_API_CONFIG);
@@ -18,7 +18,8 @@ export class AccountService {
   constructor() {
     console.log(
       `%c[AccountService] istanziato per area: "${this.config.area}" | baseUrl: ${this.config.baseUrl}`,
-      'color: #805ad5; font-weight: bold;'
+      'color: #805ad5; font-weight: bold;',
+      
     );
   }
 
